@@ -14,7 +14,8 @@ int main(int argc, char **argv) {
     for (int i = 1; i < argc; i++) {
       word = argv[i];
       if (word != NULL) {
-        for (int it = 0; it < strlen(word); it++) {
+        signed int ib  = strlen(word);
+        for (int it = 0; it < ib; it++) {
           char ch = word[it];
           char *ptr = strchr(small, ch);
           char *ptr_big = strchr(big, ch);
