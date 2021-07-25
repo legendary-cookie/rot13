@@ -1,13 +1,9 @@
-compile: encode decode
+compile: encode
 
 encode:
-	gcc rot13encode.c -o rot13encode -O9 -static
-	strip rot13encode
-decode:
-	gcc rot13decode.c -o rot13decode -O9 -static
-	strip rot13decode
+	gcc rot13.c -o rot13 -O9 -static
+	strip rot13
 
 
 install:
-	install rot13decode /usr/bin
-	install rot13encode /usr/bin
+	install rot13 /usr/bin
